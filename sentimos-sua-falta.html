@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sentimos sua falta | Cyber Experience 2026</title>
+<meta name="description" content="Você confirmou presença no Cyber Experience 2026 e sentimos sua falta. Agende uma reunião com a nossa equipe.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sentimos sua falta no Cyber Experience 2026">
+<meta property="og:description" content="Vamos agendar uma reunião para mostrar o que foi apresentado no evento?">
+<meta property="og:image" content="https://wcyberexperience.onrender.com/images/og-obrigado.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--noite:#0B1426;--noite2:#14213B;--laranja:#F28C28;--texto:#E8ECF4;--suave:#9AA7C0;--linha:#27365A}
+*{box-sizing:border-box;margin:0}
+body{background:var(--noite);color:var(--texto);font:400 16px/1.6 Montserrat,system-ui,sans-serif}
+.banner{position:relative;display:flex;flex-direction:column;align-items:center;gap:18px;padding:48px 20px 56px;text-align:center;background:linear-gradient(rgba(11,20,38,.55),var(--noite)),url(images/banner-fundo.jpg) center/cover}
+.banner .by{height:34px}.banner .ev{height:84px;max-width:80%}
+h1{font:700 clamp(30px,6vw,52px)/1.1 Fraunces,Georgia,serif;max-width:16ch;text-wrap:balance}
+main{max-width:560px;margin:0 auto;padding:0 20px 56px}
+.texto{color:var(--suave);margin-bottom:28px}
+form{background:var(--noite2);border:1px solid var(--linha);border-radius:14px;padding:26px 22px}
+h2{font:600 24px/1.2 Fraunces,Georgia,serif;margin-bottom:18px}
+label,.rot{display:block;font-size:14px;font-weight:500;margin:14px 0 6px}
+.opt{color:var(--suave);font-weight:400}
+input[type=text],input[type=tel],input[type=email],.pick{width:100%;padding:12px 14px;border-radius:8px;border:1px solid var(--linha);background:var(--noite);color:var(--texto);font:inherit;text-align:left}
+input:focus,.pick:focus,button:focus-visible{outline:2px solid var(--laranja);outline-offset:2px}
+.pick{cursor:pointer}.pick.vazio{color:var(--suave)}
+.pop{display:none;margin-top:8px;background:var(--noite);border:1px solid var(--linha);border-radius:10px;padding:14px}
+.pop.on{display:block}
+.cal-top{display:flex;justify-content:center;font-weight:600;margin-bottom:10px;text-transform:capitalize}
+.grade{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
+.grade span.s{font-size:12px;color:var(--suave)}
+.grade button{aspect-ratio:1;border:0;border-radius:8px;background:transparent;color:var(--texto);font:inherit;cursor:pointer}
+.grade button:hover:not(:disabled){background:var(--linha)}
+.grade button.sel{background:var(--laranja);color:var(--noite);font-weight:600}
+.grade button:disabled{color:#4A5878;cursor:not-allowed;text-decoration:line-through}
+.turno{display:flex;gap:8px;margin-bottom:10px}
+.turno button,.hm button{flex:1;padding:8px;border-radius:8px;border:1px solid var(--linha);background:transparent;color:var(--texto);font:inherit;cursor:pointer}
+.turno button.on,.hm button.on{background:var(--laranja);border-color:var(--laranja);color:var(--noite);font-weight:600}
+.hm{display:flex;gap:6px;justify-content:center;margin-bottom:6px}
+.hm button{flex:none;font:600 26px Fraunces,serif;padding:2px 14px}
+.dica{text-align:center;font-size:13px;color:var(--suave)}
+svg{display:block;width:240px;max-width:100%;margin:6px auto 0}
+svg .n{cursor:pointer}svg .n circle{fill:transparent}svg .n:hover circle{fill:var(--linha)}
+svg .n text{fill:var(--texto);font:500 14px Montserrat,sans-serif;text-anchor:middle;dominant-baseline:central;pointer-events:none}
+svg .n.sel circle{fill:var(--laranja)}svg .n.sel text{fill:var(--noite);font-weight:600}
+svg .n.off{cursor:not-allowed}svg .n.off:hover circle{fill:transparent}svg .n.off text{fill:#4A5878}
+.enviar{width:100%;margin-top:22px;padding:14px;border:0;border-radius:8px;background:var(--laranja);color:var(--noite);font:600 16px Montserrat,sans-serif;cursor:pointer}
+.enviar:disabled{opacity:.6;cursor:wait}
+.erro{color:#FF9C8A;font-size:14px;margin-top:12px;min-height:1.4em}
+.ok{display:none;text-align:center;padding:30px 10px}
+.ok h2{margin-bottom:10px}
+footer{text-align:center;padding:26px 20px 40px;border-top:1px solid var(--linha);color:var(--suave);font-size:13px}
+footer img{height:46px;margin-bottom:10px}
+@media (prefers-reduced-motion:no-preference){.banner h1{animation:sobe .7s ease-out both}@keyframes sobe{from{opacity:0;transform:translateY(14px)}}}
+</style>
+</head>
+<body>
+
+<header class="banner">
+  <img class="by" src="images/logo-by-empresas.png" alt="By W empresas">
+  <img class="ev" src="images/logo-cyberexperience.png" alt="Cyber Experience 2026">
+  <h1>Sentimos sua falta!</h1>
+</header>
+
+<main>
+  <p class="texto">Vamos agendar uma reunião para mostrar o que foi apresentado no evento e as possibilidades de melhorar sua operação? Por favor, sugira dia e hora. Em breve iremos confirmar o encontro com você.</p>
+
+  <form id="f" novalidate>
+    <h2>Agende sua reunião</h2>
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" autocomplete="name" required>
+    <label for="empresa">Empresa</label>
+    <input type="text" id="empresa" autocomplete="organization" required>
+    <label for="tel">Telefone</label>
+    <input type="tel" id="tel" autocomplete="tel" inputmode="tel" required>
+    <label for="email">E-mail <span class="opt">(opcional)</span></label>
+    <input type="email" id="email" autocomplete="email">
+
+    <span class="rot">Melhor dia</span>
+    <button type="button" class="pick vazio" id="diaBtn" aria-expanded="false">Escolha o dia</button>
+    <div class="pop" id="calPop"></div>
+
+    <span class="rot">Melhor hora</span>
+    <button type="button" class="pick vazio" id="horaBtn" aria-expanded="false">Escolha a hora</button>
+    <div class="pop" id="relPop"></div>
+
+    <p class="erro" id="erro" role="alert"></p>
+    <button class="enviar" id="enviar" type="submit">Enviar sugestão</button>
+  </form>
+
+  <div class="ok" id="ok" role="status">
+    <h2>Sugestão enviada!</h2>
+    <p class="texto">Recebemos o seu pedido. Em breve entraremos em contato para confirmar o encontro.</p>
+  </div>
+</main>
+
+<footer>
+  <img src="images/logo-cyberexperience.png" alt="Cyber Experience 2026"><br>
+  © 2026 By W empresas
+</footer>
+
+<script>
+const CONFIG = {
+  // Cole aqui a URL /exec da NOVA implantação (planilha dos que não foram ao evento)
+  ENDPOINT: "COLE_AQUI_A_NOVA_URL_EXEC",
+  ORIGEM: "Sentimos sua falta",
+  HORA_INICIO: 8,
+  HORA_FIM: 18,
+  PASSO_MINUTOS: 5,
+  BLOQUEAR_DOMINGO: true,
+  BLOQUEAR_SABADO: false
+};
+
+const $ = id => document.getElementById(id);
+const p2 = n => String(n).padStart(2, "0");
+let dia = null, hora = null;
+
+/* ---------- Calendário ---------- */
+const amanha = new Date(); amanha.setHours(0,0,0,0); amanha.setDate(amanha.getDate() + 1);
+function montaCal() {
+  const ano = amanha.getFullYear(), mes = amanha.getMonth();
+  const nome = new Date(ano, mes, 1).toLocaleDateString("pt-BR", {month:"long", year:"numeric"});
+  let h = `<div class="cal-top">${nome}</div><div class="grade">` +
+    ["D","S","T","Q","Q","S","S"].map(d => `<span class="s">${d}</span>`).join("");
+  const primeiro = new Date(ano, mes, 1).getDay();
+  h += "<span></span>".repeat(primeiro);
+  const ultimo = new Date(ano, mes + 1, 0).getDate();
+  for (let d = 1; d <= ultimo; d++) {
+    const dt = new Date(ano, mes, d), sem = dt.getDay();
+    const bloq = dt < amanha || (CONFIG.BLOQUEAR_DOMINGO && sem === 0) || (CONFIG.BLOQUEAR_SABADO && sem === 6);
+    h += `<button type="button" data-d="${d}" ${bloq ? "disabled" : ""}>${d}</button>`;
+  }
+  $("calPop").innerHTML = h + "</div>";
+}
+montaCal();
+$("calPop").addEventListener("click", e => {
+  const b = e.target.closest("button[data-d]"); if (!b) return;
+  const d = +b.dataset.d;
+  dia = new Date(amanha.getFullYear(), amanha.getMonth(), d);
+  $("calPop").querySelectorAll("button").forEach(x => x.classList.remove("sel"));
+  b.classList.add("sel");
+  $("diaBtn").textContent = dia.toLocaleDateString("pt-BR", {weekday:"long", day:"numeric", month:"long"});
+  $("diaBtn").classList.remove("vazio");
+  abre("calPop", false);
+});
+$("diaBtn").onclick = () => abre("calPop");
+
+function abre(id, forca) {
+  const el = $(id), on = forca === undefined ? !el.classList.contains("on") : forca;
+  el.classList.toggle("on", on);
+  (id === "calPop" ? $("diaBtn") : $("horaBtn")).setAttribute("aria-expanded", on);
+  if (on && id === "calPop") abre("relPop", false);
+  if (on && id === "relPop") abre("calPop", false);
+}
+
+/* ---------- Relógio analógico ---------- */
+let turno = "manha", etapa = "h", hSel = null, mSel = null;
+const R = 88, C = 120;
+const pos = (i, r) => { const a = (i / 12) * 2 * Math.PI - Math.PI / 2; return [C + r * Math.cos(a), C + r * Math.sin(a)]; };
+
+// hora (1-12) -> hora de 24h conforme o turno
+const h24 = h => turno === "manha" ? h : (h === 12 ? 12 : h + 12);
+const hOk = h => { const x = h24(h); return x >= CONFIG.HORA_INICIO && x <= CONFIG.HORA_FIM && (turno === "manha" ? x < 12 : x >= 12); };
+const mOk = m => !(h24(hSel) === CONFIG.HORA_FIM && m > 0);
+
+function montaRel() {
+  const horas = etapa === "h";
+  let svg = `<svg viewBox="0 0 240 240" aria-label="Relógio"><circle cx="120" cy="120" r="112" fill="#0B1426" stroke="#27365A"/>`;
+  const sel = horas ? hSel : (mSel === null ? null : mSel / 5);
+  if (sel !== null) {
+    const [x, y] = pos(horas ? hSel % 12 : sel, R - 6);
+    svg += `<line x1="120" y1="120" x2="${x}" y2="${y}" stroke="#F28C28" stroke-width="2"/>`;
+  }
+  svg += `<circle cx="120" cy="120" r="4" fill="#F28C28"/>`;
+  for (let i = 0; i < 12; i++) {
+    const v = horas ? (i === 0 ? 12 : i) : i * 5;
+    const ok = horas ? hOk(v) : mOk(v);
+    const on = horas ? v === hSel : v === mSel;
+    const [x, y] = pos(i, R);
+    svg += `<g class="n ${ok ? "" : "off"} ${on ? "sel" : ""}" data-v="${v}"><circle cx="${x}" cy="${y}" r="17"/><text x="${x}" y="${y}">${horas ? v : p2(v)}</text></g>`;
+  }
+  svg += "</svg>";
+  $("relPop").innerHTML =
+    `<div class="turno"><button type="button" data-t="manha" class="${turno === "manha" ? "on" : ""}">Manhã</button><button type="button" data-t="tarde" class="${turno === "tarde" ? "on" : ""}">Tarde</button></div>` +
+    `<div class="hm"><button type="button" data-e="h" class="${horas ? "on" : ""}">${hSel === null ? "--" : p2(h24(hSel))}</button><span style="font:600 26px Fraunces,serif">:</span><button type="button" data-e="m" class="${!horas ? "on" : ""}">${mSel === null ? "--" : p2(mSel)}</button></div>` +
+    `<p class="dica">${horas ? "Toque na hora" : "Agora toque nos minutos"}</p>` + svg;
+}
+montaRel();
+$("horaBtn").onclick = () => abre("relPop");
+$("relPop").addEventListener("click", e => {
+  const t = e.target.closest("[data-t]"), et = e.target.closest("[data-e]"), n = e.target.closest(".n");
+  if (t) { turno = t.dataset.t; hSel = null; mSel = null; etapa = "h"; hora = null; resumo(); }
+  else if (et) { if (et.dataset.e === "m" && hSel === null) return; etapa = et.dataset.e; }
+  else if (n && !n.classList.contains("off")) {
+    const v = +n.dataset.v;
+    if (etapa === "h") { hSel = v; mSel = null; etapa = "m"; hora = null; resumo(); }
+    else { mSel = v; hora = `${p2(h24(hSel))}:${p2(mSel)}`; resumo(); montaRel(); abre("relPop", false); return; }
+  }
+  montaRel();
+});
+function resumo() {
+  $("horaBtn").textContent = hora ? hora.replace(":", "h") : "Escolha a hora";
+  $("horaBtn").classList.toggle("vazio", !hora);
+}
+
+/* ---------- Envio ---------- */
+$("f").addEventListener("submit", async e => {
+  e.preventDefault();
+  const dados = {
+    nome: $("nome").value.trim(), empresa: $("empresa").value.trim(),
+    telefone: $("tel").value.trim(), email: $("email").value.trim(),
+    dia: dia ? `${p2(dia.getDate())}/${p2(dia.getMonth() + 1)}/${dia.getFullYear()}` : "",
+    hora: hora || "", origem: CONFIG.ORIGEM
+  };
+  const faltam = [];
+  if (!dados.nome) faltam.push("nome");
+  if (!dados.empresa) faltam.push("empresa");
+  if (!dados.telefone) faltam.push("telefone");
+  if (!dados.dia) faltam.push("dia");
+  if (!dados.hora) faltam.push("hora");
+  if (faltam.length) { $("erro").textContent = "Preencha: " + faltam.join(", ") + "."; return; }
+  if (CONFIG.ENDPOINT.indexOf("COLE_AQUI") === 0) { $("erro").textContent = "Endereço da planilha ainda não configurado."; return; }
+  $("erro").textContent = ""; $("enviar").disabled = true; $("enviar").textContent = "Enviando…";
+  try {
+    await fetch(CONFIG.ENDPOINT, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(dados) });
+    $("f").style.display = "none"; $("ok").style.display = "block";
+    $("ok").scrollIntoView({ behavior: "smooth", block: "center" });
+  } catch (err) {
+    $("erro").textContent = "Não foi possível enviar. Verifique sua conexão e tente de novo.";
+    $("enviar").disabled = false; $("enviar").textContent = "Enviar sugestão";
+  }
+});
+</script>
+</body>
+</html>
